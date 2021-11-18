@@ -34,5 +34,5 @@ def volleyball():
         response_data = json.dumps(schedule, ensure_ascii=False).encode("utf8")
         return response_data
 
-    except Exception:
+    except TypeError:
         return {"message": "Could not fetch ticket information", "status": "500"}
