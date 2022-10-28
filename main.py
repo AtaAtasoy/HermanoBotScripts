@@ -1,11 +1,13 @@
 from flask import Flask
 import os
 from volleyball import volleyball_module
+from twitter import twitter_module
 from dotenv import load_dotenv
 
 load_dotenv()
 app = Flask(__name__)
 app.register_blueprint(volleyball_module, url_prefix = '/volleyball')
+app.register_blueprint(twitter_module, url_prefix = "/twitter")
 
 if __name__ == "__main__":
     # Bind to PORT if defined, otherwise default to 5000.

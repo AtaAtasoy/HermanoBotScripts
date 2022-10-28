@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from flask import Blueprint, json
-from werkzeug.exceptions import NotFound
 import requests
 import os
 
